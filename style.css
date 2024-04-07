@@ -1,0 +1,81 @@
+/* Gaya untuk latar belakang dan kontainer umum */
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin: 0; /* Menghilangkan margin default pada body */
+}
+
+.container {
+    width: 200%; /* Kontainer mengisi lebar layar */
+    max-width: 700px; /* Tetapkan lebar maksimum */
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+    background-image: url('album.jpeg'); /* Ganti dengan URL atau path dari gambar background Anda */
+    background-size: cover; /* Mengatur agar gambar latar belakang menutupi seluruh kontainer */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar latar belakang */
+    background-position: center;
+    border-radius: 10px; /* Membuat sudut container sedikit melengkung */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Tambahkan efek bayangan pada kontainer */
+}
+
+/* Gaya untuk lirik lagu */
+.lyrics {
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk pemutar audio */
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Gaya untuk judul lagu */
+h1 {
+    margin-top: 0;
+}
+
+/* Gaya untuk paragraf */
+p {
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk info lagu */
+.song-info {
+    text-align: left; /* Sesuaikan dengan posisi yang Anda inginkan */
+    margin-bottom: 20px;
+}
+
+/* Gaya untuk deskripsi lagu */
+.song-description {
+    font-style: italic;
+}
+
+/*33*/
+.song-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.song-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.song-details {
+    flex-grow: 1;
+}
+
+.song-details h3 {
+    margin: 0;
+}
+
+.song-details p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+

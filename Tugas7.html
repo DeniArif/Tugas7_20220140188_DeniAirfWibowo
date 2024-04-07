@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Player</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        .artist-photo {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+        }
+        .album-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .album-info h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #000; /* Warna teks hitam */
+        }
+        .album-info p {
+            font-size: 16px;
+            margin: 0;
+            color: #000; /* Warna teks hitam */
+        }
+        .song-list {
+            margin-top: 20px;
+        }
+        .song-list h2 {
+            font-size: 20px;
+            color: #000; /* Warna teks hitam */
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .song-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .song-list li {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .song-list li a {
+            text-decoration: none;
+            color: #000; /* Warna teks hitam */
+            display: flex;
+            align-items: center;
+        }
+        .song-image {
+            width: 80px;
+            height: 80px;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+        .song-details h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #000; /* Warna teks hitam */
+        }
+        .song-details p {
+            margin: 0;
+            font-size: 14px;
+            color: #000; /* Warna teks hitam */
+        }
+        .audio-container {
+            text-align: center;
+            width: 100px; /* Mengatur lebar audio container */
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="foto.jpg" alt="Artist Photo" class="artist-photo">
+        <div class="album-info">
+            <h1>MCR</h1>
+            <p class="album-description">My Chemical Romance</p>
+        </div>
+    </div>
+    
+    <div class="song-list">
+        <h2>More Songs</h2>
+        <ul>
+            <li>
+                <img src="foto.jpg" alt="Song 1" class="song-image">
+                <div class="song-details">
+                    <h3>Welcome to the Black Parade</h3>
+                    <p>My Chemical Romance</p>
+                </div>
+                <div class="audio-container">
+                    <audio id="audio1" controls>
+                        <source src="My Chemical Romance - Welcome To The Black Parade (audio).mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </li>
+            <li>
+                <img src="foto.jpg" alt="Song 2" class="song-image">
+                <div class="song-details">
+                    <h3>Cancer</h3>
+                    <p>My Chemical Romance</p>
+                </div>
+                <div class="audio-container">
+                    <audio id="audio2" controls>
+                        <source src="My Chemical Romance - Cancer.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </li>
+            <li>
+                <img src="foto.jpg" alt="Song 3" class="song-image">
+                <div class="song-details">
+                    <h3>I Don't Love You</h3>
+                    <p>My Chemical Romance</p>
+                </div>
+                <div class="audio-container">
+                    <audio id="audio3" controls>
+                        <source src="My Chemical Romance - I Don't Love You [Official Music Video] [HD].mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </li>
+            <li>
+                <img src="foto.jpg" alt="Song 4" class="song-image">
+                <div class="song-details">
+                    <h3>Disenchanted</h3>
+                    <p>My Chemical Romance</p>
+                </div>
+                <div class="audio-container">
+                    <audio id="audio4" controls>
+                        <source src="My Chemical Romance - Disenchanted - 2.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        const audios = document.querySelectorAll('audio');
+        audios.forEach(audio => {
+            audio.addEventListener('play', function() {
+                audios.forEach(a => {
+                    if (a !== audio) {
+                        a.pause();
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
