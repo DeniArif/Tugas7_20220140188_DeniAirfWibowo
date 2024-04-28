@@ -94,6 +94,19 @@
             width: 100%;
             margin-top: 10px;
         }
+        /* CSS untuk mengubah warna teks di Band Members */
+        .band-members h2 {
+            color: blue; /* Warna teks judul */
+        }
+        .band-members li {
+            color: green; /* Warna teks anggota */
+        }
+        /* CSS untuk mengatur ukuran foto anggota band */
+        .member-photo {
+            width: 100px; /* Ukuran lebar foto */
+            height: 100px; /* Ukuran tinggi foto */
+            border-radius: 50%; /* Membuat foto menjadi lingkaran */
+        }
     </style>
 </head>
 <body>
@@ -163,7 +176,6 @@
         </ul>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         const audios = document.querySelectorAll('audio');
         audios.forEach(audio => {
@@ -176,32 +188,34 @@
             });
         });
     </script>
+
+    <!-- Band Members Section -->
     <div class="band-members">
         <h2>Band Members</h2>
         <ul>
             <li>
-                <img src="gerard.jpg" alt="Gerard Way" class="member-photo">
+                <img src="Gerard way.jpg" alt="Gerard Way" class="member-photo">
                 <div class="member-details">
                     <h3>Gerard Way</h3>
                     <p>Vocals</p>
                 </div>
             </li>
             <li>
-                <img src="mikey.jpg" alt="Mikey Way" class="member-photo">
+                <img src="Mikey way.jpeg" alt="Mikey Way" class="member-photo">
                 <div class="member-details">
                     <h3>Mikey Way</h3>
                     <p>Bass</p>
                 </div>
             </li>
             <li>
-                <img src="ray.jpg" alt="Ray Toro" class="member-photo">
+                <img src="Ray Toro.jpeg" alt="Ray Toro" class="member-photo">
                 <div class="member-details">
                     <h3>Ray Toro</h3>
                     <p>Guitar</p>
                 </div>
             </li>
             <li>
-                <img src="frank.jpg" alt="Frank Iero" class="member-photo">
+                <img src="Frank lero.jpeg" alt="Frank Iero" class="member-photo">
                 <div class="member-details">
                     <h3>Frank Iero</h3>
                     <p>Guitar</p>
@@ -209,5 +223,8 @@
             </li>
         </ul>
     </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
